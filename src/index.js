@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Single from "./layout/single";
+import Basic from './layout/basic';
 
 
 const feather = require('feather-icons');
@@ -31,10 +32,7 @@ const router = createBrowserRouter([
         path: "/detalle/:slug",
         element: <Single />,
       },
-      {
-        path: "/preguntas",
-        element: <PreguntFrec />, // Añade la ruta para Preguntas
-      },
+      
       
     ],
   },

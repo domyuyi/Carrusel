@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from "react-router-dom";
-import '/workspaces/project/src/css/Carrusel.css';
+import '/workspaces/Carrusel/src/css/Carrusel.css';
 
 const Carrusel = () => {
   const navigate = useNavigate();
