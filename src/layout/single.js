@@ -23,8 +23,9 @@ const Single = () => {
           />
         </div>
         <div style={{ flex: '1', marginLeft: '20px' }}>
-          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{procesador.price}</p>
           <p style={{ fontSize: '16px' }}>{procesador.characteristics}</p>
+          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{procesador.price}</p>
+          
         </div>
       </div>
     </>
