@@ -1,19 +1,10 @@
-'bootstrap/dist/css/bootstrap.min.css';
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './layout/app';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Single from "./layout/single";
 import Basic from './layout/basic';
-
-
-const feather = require('feather-icons');
-setTimeout(() => {
-  feather.replace();
-}, 1000);
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
@@ -22,18 +13,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <>
-          <div>
-          <App />
-          </div>
-        </>
+        element: <App />
       },
       {
         path: "/detalle/:slug",
         element: <Single />,
       },
-      
-      
     ],
   },
 ]);
