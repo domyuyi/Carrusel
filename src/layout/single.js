@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import procesadorData from '/workspaces/Carrusel/src/procesador.json';
 
-
 const Single = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -11,6 +10,8 @@ const Single = () => {
   if (!procesador) {
     return <div>Procesador no encontrado</div>;
   }
+
+  const characteristicsArray = procesador.characteristics.split('\n');
 
   return (
     <>
@@ -25,13 +26,28 @@ const Single = () => {
           />
         </div>
         <div style={{ flex: '1', marginLeft: '20px' }}>
-          <p style={{ fontSize: '16px' }}>{procesador.characteristics}</p>
-          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{procesador.price}</p>
-          
+          <div>
+            {characteristicsArray.map((char, index) => {
+              if (char.startsWith('VISTA RÁPIDA:')) {
+                return (
+                  <p key={index} style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px' }}>
+                    {char}
+                  </p>
+                );
+              } else {
+                return (
+                  <p key={index} style={{ fontSize: '14px', marginBottom: '5px', lineHeight: '1.2' }}>
+                    {char}
+                  </p>
+                );
+              }
+            })}
+          </div>
+          <p style={{ fontSize: '18px', fontWeight: 'bold', color: 'red' }}>{procesador.price}</p>
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-        <button type="button" class="btn btn-primary" onClick={() => navigate(-1)}>Regresar</button> 
+        <button type="button" className="btn btn-primary" onClick={() => navigate(-1)}>Regresar</button>
       </div>
     </>
   );
