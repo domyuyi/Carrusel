@@ -6,9 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Basic from "./layout/basic";
 import Single from "./layout/single";
-import PreguntFrec from './layout/preguntfrec';
 
 
 const feather = require('feather-icons');

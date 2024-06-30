@@ -1,4 +1,4 @@
-import Procesador from '/workspaces/project/src/procesador.json'
+import Procesador from '/workspaces/Carrusel/src/procesador.json'
 
 const Single = () => {
 
