@@ -1,3 +1,8 @@
+.carousel {
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: auto; /* Centra el carrusel */
+}
+
 .carrusel-container {
   width: 100%;
   max-width: 1200px;
@@ -30,9 +35,21 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
+  color: blackwhite;
+  text-align: center; /* Centra el texto */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+.caption {
+  position: absolute;
+  bottom: -25px; /* Ajusta la distancia desde abajo según necesites */
+  left: 0;
+  right: 0;
+  color: black; /* Color del texto */
+  padding: 10px;
+  text-align: center; /* Centra el texto */
+  font-size: 10px; /* Tamaño de la fuente */
+}
+
 
 .item-name {
   font-size: 1.2em;
@@ -82,4 +99,13 @@
 .single-details .price {
   font-size: 18px;
   font-weight: bold;
+}
+
+.carousel-container .image-container img {
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.carousel-container .image-container img:hover {
+  transform: scale(1.1);
+  border: 2px solid #000; /* Adjust the border color and width as needed */
 }

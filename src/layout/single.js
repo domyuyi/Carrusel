@@ -18,14 +18,23 @@ const Single = () => {
       <center><h1>{procesador.name}</h1></center>
       <hr />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
-        <div style={{ flex: '0 0 50%', textAlign: 'center' }}>
+        <div style={{ 
+          flex: '0 0 50%', 
+          textAlign: 'center', 
+          borderRight: '2px solid #ccc', 
+          paddingRight: '20px' 
+        }}>
           <img 
             src={procesador.picture} 
             alt={procesador.name} 
             style={{ width: '300px', height: 'auto' }} 
           />
         </div>
-        <div style={{ flex: '1', marginLeft: '20px' }}>
+        <div style={{ 
+          flex: '1', 
+          marginLeft: '20px', 
+          textAlign: 'center' 
+        }}>
           <div>
             {characteristicsArray.map((char, index) => {
               if (char.startsWith('VISTA RÁPIDA:')) {
