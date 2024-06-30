@@ -1,9 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import procesadorData from '/workspaces/Carrusel/src/procesador.json';
+
 
 const Single = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const procesador = procesadorData.find(it => it.slug === slug);
 
   if (!procesador) {
@@ -27,6 +29,9 @@ const Single = () => {
           <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{procesador.price}</p>
           
         </div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <button type="button" class="btn btn-primary" onClick={() => navigate(-1)}>Regresar</button> 
       </div>
     </>
   );
